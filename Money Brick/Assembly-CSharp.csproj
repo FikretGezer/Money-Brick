@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A71BCE47-3CB2-192E-3E3B-14ADDF25DAD7}</ProjectGuid>
+    <ProjectGuid>{1A65DBFA-C58E-B982-8605-6A26DACD1DB7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -70,22 +70,26 @@
     <Compile Include="Assets\4UsGame\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
     <Compile Include="Assets\4UsGame\Epic Toon FX\Demo\Scripts\VFX Library\PEButtonScript.cs" />
     <Compile Include="Assets\4UsGame\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
+    <Compile Include="Assets\Scripts\playerScript2.cs" />
     <Compile Include="Assets\Def Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\4UsGame\Epic Toon FX\Demo\Scripts\ETFXEffectCycler.cs" />
     <Compile Include="Assets\4UsGame\Epic Toon FX\Demo\Scripts\VFX Library\UICanvasManager.cs" />
     <Compile Include="Assets\4UsGame\Epic Toon FX\Demo\Scripts\ETFXEffectControllerPooled.cs" />
     <Compile Include="Assets\Scripts\randomSpawn.cs" />
     <Compile Include="Assets\4UsGame\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
-    <Compile Include="Assets\Scripts\playerScript2.cs" />
+    <Compile Include="Assets\Scripts\moneyControl.cs" />
+    <Compile Include="Assets\Scripts\endGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Mobile_Specular_Rim.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\SG2_Template_URP.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_Triplanar Sampling.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders Generated\Examples\Default\Dissolve.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Standard PBS\TCP2_Standard PBS Outline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Include\TCP2_Outline_Behind_SM2.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Specular_Rim.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Specular_Reflection_RimOutline_Outline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_VertexDisplacement.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_Outline.txt" />
@@ -96,6 +100,7 @@
     <None Include="Assets\GUI Animator FREE\Scripts\GUIAnimatorFREE.dll" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders Generated\Examples\SG2\Detail Texture Simple.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Standard PBS\TCP2_PBS_Main.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_DepthTexture.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Reflection_OutlineBlending.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants Base\TCP2_Mobile_Specular_OutlineBlending.shader" />
@@ -111,11 +116,13 @@
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Specular_Reflection_Outline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Mobile_RimOutline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders Generated\Examples\Default\Old School.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_Dissolve.txt" />
     <None Include="Assets\Fantasy Skybox\Readme\Readme.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Specular_Reflection_Rim_Outline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Standard PBS\TCP2_Standard PBS Outline Blended (Specular).shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders Generated\Examples\SG2\Animated Dissolve.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants Base\TCP2_Mobile_OutlineBlending.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Mobile_Matcap_OutlineBlending.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Standard PBS\TCP2_Standard PBS Outline (Specular).shader" />
@@ -132,6 +139,7 @@
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates\TCP2_ShaderTemplate_Water.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\SG2_Template_Default.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders Generated\Examples\Default\Snow Accumulation.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Mobile_Matcap_Rim_Outline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Mobile_Matcap_Outline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\TCP2_OutlineOnly Blended.shader" />
@@ -168,17 +176,25 @@
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_AlbedoHSV.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Mobile_Matcap_Rim_OutlineBlending.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Rim_OutlineBlending.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Include\TCP2_Outline_Behind.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_Normal Mapping.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Reflection_Rim_Outline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders Generated\Examples\PBS\Blended Outline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Mobile_Specular_Matcap_RimOutline_OutlineBlending.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Specular_Rim_Outline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Mobile_Matcap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Standard PBS\TCP2_Standard PBS.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_VertExmotion.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Include\TCP2_Outline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders Generated\Examples\Default\Subsurface Scattering.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_Vertical Fog.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders Generated\Examples\Water\Water WindWaker2.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Reflection_Rim_OutlineBlending.shader" />
@@ -191,6 +207,7 @@
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_Ramp Shading.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Mobile_Specular_Matcap_Rim_Outline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Mobile_Matcap_Rim.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Standard PBS\TCP2_Standard PBS Outline Blended.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_Sketch.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Reflection_Outline.shader" />
@@ -212,6 +229,7 @@
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Specular_Rim_OutlineBlending.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders Generated\Examples\Default\Sketch.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Standard PBS\TCP2_PBS_ShadowMeta.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_RimOutline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\TCP2_Mobile.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders Generated\Examples\Water\Lava Cartoon.shader" />
@@ -222,17 +240,21 @@
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Hybrid\TCP2 Hybrid URP Support.cginc" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Standard PBS\TCP2_Standard PBS (Specular).shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants Base\TCP2_Mobile_Outline.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants Base\TCP2_Desktop_Specular_Outline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Mobile_Rim_OutlineBlending.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_Rim Lighting.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants Base\TCP2_Mobile_Specular_Outline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_Subsurface Scattering.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Mobile_Matcap_RimOutline.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_NoTile Sampling.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Standard PBS\TCP2_PBS_BRDF.cginc" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants Base\TCP2_Desktop_Specular.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Mobile_Specular_RimOutline_Outline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\TCP2_OutlineOnly.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders Generated\Examples\Water\Water WindWaker.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_CustomAmbient.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Specular_Reflection.shader" />
@@ -243,6 +265,7 @@
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Hybrid\TCP2 Hybrid Shader.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_Specular.txt" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders Generated\Examples\SG2\Detail Texture.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shaders\Hybrid\TCP2 Hybrid Shader Outline.shader" />
     <None Include="Assets\4UsGame\Toony Colors Pro\Shader Templates 2\Modules\Module_Reflection.txt" />
   </ItemGroup>
@@ -901,15 +924,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{587BA660-3475-4AFC-EF7E-4A542185E1D4}</Project>
+      <Project>{3E9C5202-90F1-AE26-3021-01B53A4CF96E}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Runtime.csproj">
-      <Project>{A31BE32E-D6A4-5E68-3106-76FD93A380BD}</Project>
+      <Project>{72F11FE4-4AC3-2240-02C3-6E6B2AE93E8B}</Project>
       <Name>ToonyColorsPro.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Editor.csproj">
-      <Project>{E430A31A-270D-2391-E811-F26EF281D511}</Project>
+      <Project>{36EA3E1E-DE34-F859-EECA-7564CD1CB269}</Project>
       <Name>ToonyColorsPro.Editor</Name>
     </ProjectReference>
   </ItemGroup>

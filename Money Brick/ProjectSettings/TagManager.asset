@@ -8,6 +8,8 @@ TagManager:
   - endORoad
   - ground
   - moneyNew
+  - wall
+  - moneyStackObject
   layers:
   - Default
   - TransparentFX

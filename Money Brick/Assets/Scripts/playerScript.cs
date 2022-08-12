@@ -9,13 +9,14 @@ public class playerScript : MonoBehaviour
     Animator playerAnim;
     Rigidbody playerBody;
     CharacterController playerController;
+    endGame endgame;
     float gravity = -9.81f;
     Vector3 velocity;
     
     [SerializeField]
     float speed;
     [SerializeField]
-    GameObject moneyStack;
+    public GameObject moneyStack;
 
     bool isGrounded;
     public Transform groundCheck;
@@ -27,16 +28,19 @@ public class playerScript : MonoBehaviour
     List<GameObject> cubesCollected = new List<GameObject>();
     GameObject lastCubeCollected;
     //float oncekiCube=56.591f;
-    float oncekiCube = 490.25f;
+    //float oncekiCube = 490.25f; //yolun sonunu belirlemek için yazýldý. Bu sayede paralarý ona göre dizecek.(3.73 trigger ile fark)
+    float oncekiCube = 318.695f; //yolun sonunu belirlemek için yazýldý. Bu sayede paralarý ona göre dizecek.(3.73 trigger ile fark)
     bool isOver;
-    [SerializeField]Text moneyCountText;
-    int moneyCount;
+    public bool isGameFinished;
+    [SerializeField]public TextMeshProUGUI moneyCountText;
+    public int moneyCount;
     private void Awake()
     {
         playerAnim = GetComponent<Animator>();
         playerBody = GetComponent<Rigidbody>();
         playerController = GetComponent<CharacterController>();
         cubes = GameObject.FindGameObjectsWithTag("money");
+        endgame = FindObjectOfType<endGame>();
     }
 
     private void FixedUpdate()
@@ -46,7 +50,7 @@ public class playerScript : MonoBehaviour
         Movements();
     }
 
-    void Movements()
+     void Movements()
     {
      //   isGrounded = Physics.CheckSphere(groundCheck.position, groundDist, groundMask);
         x = Input.GetAxis("Horizontal");
@@ -71,6 +75,7 @@ public class playerScript : MonoBehaviour
                     pos.z = lastCubeCollected.transform.position.z;
                     transform.position = pos;
                     isOver = true;
+                    endgame.GameFinished();
                 }                    
             }  
         }
@@ -91,8 +96,6 @@ public class playerScript : MonoBehaviour
                 moneyStack.transform.position.z);
                 other.gameObject.transform.parent = moneyStack.transform;
             }
-            cubesCollected.Add(other.gameObject);
-            lastCubeCollected = other.gameObject;
             moneyCount += 100;
             moneyCountText.text ="$ " + moneyCount.ToString();
         }
@@ -101,6 +104,11 @@ public class playerScript : MonoBehaviour
     {
         if(other.gameObject.tag=="endORoad")
         {
+            for (int i = 0; i < moneyStack.transform.childCount; i++)
+            {
+                cubesCollected.Add(moneyStack.transform.GetChild(i).gameObject);
+                lastCubeCollected = moneyStack.transform.GetChild(moneyStack.transform.childCount - 1).gameObject;
+            }
             for (int i = 0; i < cubesCollected.Count; i++)
             {
                 moneyStack.transform.parent = null;
@@ -108,6 +116,7 @@ public class playerScript : MonoBehaviour
                 cubesCollected[i].GetComponent<BoxCollider>().isTrigger = false;
                 oncekiCube += .5f;
             }
+            isGameFinished = true;
         }
     }
 }
